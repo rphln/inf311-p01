@@ -7,8 +7,6 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.text.DecimalFormat;
-
 public class SimpleCalc extends AppCompatActivity {
 
     @Override
