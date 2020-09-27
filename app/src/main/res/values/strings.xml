@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">inf311-p01</string>
+    <string name="title_activity_simple_calc">SimpleCalc</string>
+    <!-- Strings used for fragments for navigation -->
+
+    <string name="simple_calc_first">First operand</string>
+    <string name="simple_calc_second">Second operand</string>
+    <string name="result_pending">The result is...</string>
+    <string name="format_invalid">Please insert a number</string>
+    <string name="operation_invalid">Error! The operation is invalid</string>
+    <string name="result">The result is %1$s</string>
+    <string name="times">*</string>
+    <string name="minus">-</string>
+    <string name="division">/</string>
+    <string name="plus">+</string>
+    <string name="back">Back</string>
+</resources>

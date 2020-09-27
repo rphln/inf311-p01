@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SimpleCalc">
+
+    <EditText
+        android:id="@+id/firstOperand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/form_item_margin"
+        android:ems="12"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/firstOperandLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:labelFor="@id/firstOperand"
+        android:text="@string/simple_calc_first"
+        app:layout_constraintBottom_toTopOf="@+id/firstOperand"
+        app:layout_constraintStart_toStartOf="@+id/firstOperand" />
+
+
+    <EditText
+        android:id="@+id/secondOperand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/form_item_margin"
+        android:ems="12"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="@+id/firstOperand"
+        app:layout_constraintTop_toBottomOf="@+id/firstOperand" />
+
+    <TextView
+        android:id="@+id/secondOperandLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:labelFor="@id/secondOperand"
+        android:text="@string/simple_calc_second"
+        app:layout_constraintBottom_toTopOf="@+id/secondOperand"
+        app:layout_constraintStart_toStartOf="@+id/secondOperand" />
+
+
+    <Button
+        android:id="@+id/buttonPlus"
+        android:layout_width="@dimen/form_item_margin"
+        android:layout_height="@dimen/form_item_margin"
+        android:layout_marginTop="@dimen/form_item_margin"
+        android:text="@string/plus"
+        android:onClick="onOperationClick"
+        android:tag="add"
+        app:layout_constraintEnd_toStartOf="@+id/buttonMinus"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/secondOperand"
+        app:layout_constraintTop_toBottomOf="@+id/secondOperand" />
+
+    <Button
+        android:id="@+id/buttonMinus"
+        android:layout_width="@dimen/form_item_margin"
+        android:layout_height="@dimen/form_item_margin"
+        android:text="@string/minus"
+        android:onClick="onOperationClick"
+        android:tag="subtract"
+        app:layout_constraintEnd_toStartOf="@+id/buttonMultiplication"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonPlus"
+        app:layout_constraintTop_toTopOf="@+id/buttonPlus" />
+
+    <Button
+        android:id="@+id/buttonMultiplication"
+        android:layout_width="@dimen/form_item_margin"
+        android:layout_height="@dimen/form_item_margin"
+        android:text="@string/times"
+        android:onClick="onOperationClick"
+        android:tag="multiply"
+        app:layout_constraintEnd_toStartOf="@+id/buttonDivision"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonMinus"
+        app:layout_constraintTop_toTopOf="@+id/buttonMinus" />
+
+    <Button
+        android:id="@+id/buttonDivision"
+        android:layout_width="@dimen/form_item_margin"
+        android:layout_height="@dimen/form_item_margin"
+        android:text="@string/division"
+        android:onClick="onOperationClick"
+        android:tag="divide"
+        app:layout_constraintEnd_toEndOf="@+id/secondOperand"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonMultiplication"
+        app:layout_constraintTop_toTopOf="@+id/buttonMultiplication" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/form_item_margin"
+        android:text="@string/result_pending"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/secondOperand"
+        app:layout_constraintStart_toStartOf="@+id/secondOperand" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
